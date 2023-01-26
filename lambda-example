@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+class Person {
+	friend std::ostream& operator<< (std::ostream& os, const Person& rhs);
+	std::string name;
+	int age;
+public:
+	Person() = default;
+	Person(std::string name = "x", int age = 0) : name{ name }, age{ age } {};
+	Person(const Person& p) = default;
+	~Person() = default;
+	void set_name(std::string name) { this->name = name; }
+	std::string get_name() { return this->name; }
+	void set_age(int age) { this->age = age; }
+	int get_age() { return age; }
+};
+
