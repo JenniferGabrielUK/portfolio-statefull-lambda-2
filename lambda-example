@@ -12,9 +12,9 @@ public:
 	Person(const Person& p) = default;
 	~Person() = default;
 	void set_name(std::string name) { this->name = name; }
-	std::string get_name() { return this->name; }
+	std::string get_name() const { return this->name; }
 	void set_age(int age) { this->age = age; }
-	int get_age() { return age; }
+	int get_age() const { return age; }
 };
 
 std::ostream& operator<< (std::ostream& os, const Person& rhs) {
