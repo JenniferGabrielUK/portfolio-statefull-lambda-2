@@ -17,3 +17,12 @@ public:
 	int get_age() { return age; }
 };
 
+std::ostream& operator<< (std::ostream& os, const Person& rhs) {
+	os << "[ " << rhs.name << ": " << rhs.age << "]";
+	return os;
+}
+
+int main() {
+
+	return 0;
+}
