@@ -37,6 +37,15 @@ public:
 	int get_max_people() const {
 		return max_people;
 	}
+std::vector<Person> get_people(int max_age) {
+	std::vector <Person> result;
+	int count{ 0 };
+	std::copy_if(people.begin(),
+		people.end(),
+		std::back_inserter(result),
+		[this, &count, max_age](const Person& p) {return p.get_age() && ++count <= max_people;});
+	return result;
+	}
 };
 
 int main() {
