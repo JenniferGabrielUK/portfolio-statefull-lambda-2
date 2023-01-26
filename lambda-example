@@ -49,7 +49,31 @@ std::vector<Person> get_people(int max_age) {
 	}
 };
 
-int main() {
+void test1() {
+	std::cout << "\nTest1===================" << std::endl;
+	People players;
+	players.add("Jenny", 18);
+	players.add("Elizabeth", 22);
+	players.add("Gabriel", 33);
+	players.add("Gandalf", 108);
+	auto result = players.get_people(17);
+	std::cout << std::endl;
+	for (const auto& i : result)
+		std::cout << i << std::endl;
+	players.add("Frodo", 45);
+	players.add("Sam", 23);
+	players.add("George", 63);
+	players.add("Helen", 109); 
+	players.add("Emily", 78);
+	players.add("Golom", 66);
+	players.add("Gandalf the White", 35);
+	result = players.get_people(19);
+	std::cout << std::endl;
+	for (const auto& i : result)
+		std::cout << i << std::endl;
+}
 
+int main() {
+	test1();
 	return 0;
 }
