@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <algorithm>
 
 class Person {
 	friend std::ostream& operator<< (std::ostream& os, const Person& rhs);
