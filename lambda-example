@@ -71,6 +71,16 @@ void test1() {
 	std::cout << std::endl;
 	for (const auto& i : result)
 		std::cout << i << std::endl;
+		players.set_max_people(3);
+	result = players.get_people(19);
+	std::cout << std::endl;
+	for (const auto& i : result)
+		std::cout << i << std::endl;
+	players.set_max_people(12);
+	result = players.get_people(17);
+	std::cout << std::endl;
+	for (const auto& i : result)
+		std::cout << i << std::endl;
 }
 
 int main() {
